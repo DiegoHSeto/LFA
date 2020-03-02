@@ -5,19 +5,19 @@ class MainClass
 {
   public static void Main (string[] args) 
   {         
-    double total = 0;
+    int total = 0;
 
-    double price = 0.45;
+    int price = 45;
 
-    double [] validCoins = new double [] {0.10, 0.25};
+    int [] validCoins = new int [] {10, 25};
     
     while(total <= price)
     {
-        double myCoin;
+        int myCoin;
 
         Console.WriteLine($"Insira sua moeda abaixo. Moedas válidas: {string.Join(',', validCoins)}");
 
-        myCoin = Convert.ToDouble(Console.ReadLine());
+        myCoin = Convert.ToInt32(Console.ReadLine());
 
         if(!validCoins.ToList().Contains(myCoin))
         {
@@ -36,7 +36,7 @@ class MainClass
 
           if((total - price) != 0)
           {
-            Console.WriteLine($"Perdeu {(total - price)}");
+            Console.WriteLine($"Perdeu {(total - price)} centavos");
           }
 
           break;
