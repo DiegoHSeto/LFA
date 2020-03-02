@@ -28,6 +28,8 @@ class MainClass
 
         total += myCoin;
 
+        Console.WriteLine($"\nTotal: {total}\n");
+
         if(total >= price)
         {
           Console.WriteLine("Aproveite sua Coca-Cola :)");
@@ -39,7 +41,6 @@ class MainClass
 
           break;
         }
-
     }
   }
 }
