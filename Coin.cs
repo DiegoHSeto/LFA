@@ -15,7 +15,7 @@ class MainClass
     {
         double myCoin;
 
-        Console.WriteLine("Insira sua moeda:");
+        Console.WriteLine($"Insira sua moeda abaixo. Moedas válidas: {string.Join(',', validCoins)}");
 
         myCoin = Convert.ToDouble(Console.ReadLine());
 
@@ -31,6 +31,12 @@ class MainClass
         if(total >= price)
         {
           Console.WriteLine("Aproveite sua Coca-Cola :)");
+
+          if((total - price) != 0)
+          {
+            Console.WriteLine($"Perdeu {(total - price)}");
+          }
+
           break;
         }
 
